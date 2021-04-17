@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		04781325262B2A3C008033B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04781323262B2A3C008033B0 /* Main.storyboard */; };
 		04781327262B2A3F008033B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04781326262B2A3F008033B0 /* Assets.xcassets */; };
 		0478132A262B2A3F008033B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04781328262B2A3F008033B0 /* LaunchScreen.storyboard */; };
+		04781346262B2BFF008033B0 /* UnleashFeatureFlags in Frameworks */ = {isa = PBXBuildFile; productRef = 04781345262B2BFF008033B0 /* UnleashFeatureFlags */; };
+		04781349262B2D1A008033B0 /* EnvironmentStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04781348262B2D1A008033B0 /* EnvironmentStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		04781326262B2A3F008033B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04781329262B2A3F008033B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478132B262B2A3F008033B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04781348262B2D1A008033B0 /* EnvironmentStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04781346262B2BFF008033B0 /* UnleashFeatureFlags in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				04781326262B2A3F008033B0 /* Assets.xcassets */,
 				04781328262B2A3F008033B0 /* LaunchScreen.storyboard */,
 				0478132B262B2A3F008033B0 /* Info.plist */,
+				04781348262B2D1A008033B0 /* EnvironmentStrategy.swift */,
 			);
 			path = SampleFeatureFlags;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			);
 			name = SampleFeatureFlags;
 			packageProductDependencies = (
+				04781345262B2BFF008033B0 /* UnleashFeatureFlags */,
 			);
 			productName = SampleFeatureFlags;
 			productReference = 0478131A262B2A3C008033B0 /* SampleFeatureFlags.app */;
@@ -113,6 +119,7 @@
 			);
 			mainGroup = 04781311262B2A3C008033B0;
 			packageReferences = (
+				04781344262B2BFF008033B0 /* XCRemoteSwiftPackageReference "UnleashGitlabFeatureFlags" */,
 			);
 			productRefGroup = 0478131B262B2A3C008033B0 /* Products */;
 			projectDirPath = "";
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04781349262B2D1A008033B0 /* EnvironmentStrategy.swift in Sources */,
 				04781322262B2A3C008033B0 /* ViewController.swift in Sources */,
 				0478131E262B2A3C008033B0 /* AppDelegate.swift in Sources */,
 				04781320262B2A3C008033B0 /* SceneDelegate.swift in Sources */,
@@ -345,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04781344262B2BFF008033B0 /* XCRemoteSwiftPackageReference "UnleashGitlabFeatureFlags" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/goaIKPI/UnleashGitlabFeatureFlags";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04781345262B2BFF008033B0 /* UnleashFeatureFlags */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04781344262B2BFF008033B0 /* XCRemoteSwiftPackageReference "UnleashGitlabFeatureFlags" */;
+			productName = UnleashFeatureFlags;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04781312262B2A3C008033B0 /* Project object */;
 }

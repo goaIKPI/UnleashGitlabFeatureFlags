@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UnleashFeatureFlags",
+        "repositoryURL": "https://github.com/goaIKPI/UnleashGitlabFeatureFlags",
+        "state": {
+          "branch": null,
+          "revision": "628572035ba7e9bfe277119dfa432752f0cb5386",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
