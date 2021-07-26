@@ -132,7 +132,7 @@ final public class Unleash {
         guard
             let feature = toggles?.features.first(where: { $0.name == name }),
             feature.enabled
-        else { print("key: \(name), value: false"); return false }
+        else { return false }
 
         for strategy in feature.strategies {
             guard
@@ -140,12 +140,10 @@ final public class Unleash {
                 let parameters = strategy.parameters
             else { continue }
 
-            if targetStrategy.isEnabled(parameters: parameters) {
-                print("key: \(name), value: true")
+            if targetStrategy.isEnabled(parameters: parameters) {=
                 return true
             }
         }
-        print("key: \(name), value: false")
         return false
     }
 }
