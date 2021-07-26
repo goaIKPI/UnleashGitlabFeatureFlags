@@ -101,7 +101,11 @@ final class UnleashScheduler: Scheduler {
         if state != .resumed {
             state = .resumed
             if #available(iOS 10.0, *) {
-                timer?.activate()
+                if #available(macOS 10.12, *) {
+                    timer?.activate()
+                } else {
+                    timer?.resume()
+                }
             } else {
                 timer?.resume()
             }

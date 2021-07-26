@@ -140,7 +140,7 @@ final public class Unleash {
                 let parameters = strategy.parameters
             else { continue }
 
-            if targetStrategy.isEnabled(parameters: parameters) {=
+            if targetStrategy.isEnabled(parameters: parameters) {
                 return true
             }
         }
