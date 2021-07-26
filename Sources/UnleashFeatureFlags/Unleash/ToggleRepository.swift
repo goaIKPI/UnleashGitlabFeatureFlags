@@ -31,11 +31,7 @@ final class ToggleRepository: ToggleRepositoryProtocol {
     func get(url: URL) -> (Toggles?, Error?) {
         let result = toggleService.fetchToggles(url: url)
         if let toggles = result.0 {
-            log(dump(toggles))
             self.toggles = toggles
-        }
-        if let error = result.1 {
-            log(dump(error))
         }
         return result
     }

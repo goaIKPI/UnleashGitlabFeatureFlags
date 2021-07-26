@@ -22,11 +22,7 @@ class ViewController: UIViewController {
 
     private var unleash: Unleash!
 
-    var isEnabledFlag: Bool = false {
-        didSet {
-            print(isEnabledFlag)
-        }
-    }
+    var isEnabledFlag: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
